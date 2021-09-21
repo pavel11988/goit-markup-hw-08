@@ -1,0 +1,40 @@
+.working {
+    padding-top: 47px;
+    padding-bottom: 94px;
+}
+
+.working__title {
+    margin-bottom: 50px;
+}
+
+.working__list {
+    display: flex;
+}
+
+.working__item {
+    position: relative;
+    width: 100%;
+
+    & + & {
+        margin-left: 30px;
+    }
+}
+
+.working__item-title {
+    position: absolute;
+    bottom: 0;
+    display: inline-flex;
+    width: 100%;
+    height: 70px;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    background: rgba(47, 48, 58, 0.8);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14px;
+    text-transform: uppercase;
+}
