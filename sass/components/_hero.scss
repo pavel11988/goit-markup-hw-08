@@ -1,27 +1,44 @@
 .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
 
+    background-color: gray;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/background-hero-min.jpg);
+        url(../images/hero-bgr-min/background-hero-min-mobile.jpg);
 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
     text-align: center;
+
+    @media screen and (min-width: 768px){
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bgr-min/background-hero-min-tablet.jpg);
+    }
+
+    @media screen and (min-width: 1200px){
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bgr-min/background-hero-min-desktop.jpg);
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+
 }
 
 .hero__title {
     margin-bottom: 30px;
 
     color: var(--white-color);
-
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    font-size: 26px;
+    line-height: 1.62;
+    text-align: center;
+
+    
+    // font-size: 44px;
+    // line-height: 1.36;
 }
 
 .hero__button {

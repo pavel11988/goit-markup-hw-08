@@ -18,17 +18,24 @@
 <body>
     <!--Шапка--> 
     <header class="header"> 
-            <div class="container header__main-navigation">
-                <nav class="header__main-navigation">
-                    <a href='./index.html' lang="en" class="logo">Web<span class="header-logo">Studio</span></a>
-                    
-                    <ul lang="ru" class="main-navigation__list list">
-                        <li class="main-navigation__item current">  <a href='./index.html' class="main-navigation__link current">Студия </a></li>
-                        <li class="main-navigation__item">          <a href='./portfolio.html' class="main-navigation__link">Портфолио  </a></li>
-                        <li class="main-navigation__item">          <a href='' class="main-navigation__link">Контакты                   </a></li>
-                    </ul>
-                </nav>
+        <div class="container header__container">
+            <nav class="header__main-navigation">
+                <a href='./index.html' lang="en" class="logo">Web<span class="header-logo">Studio</span></a>
+
+                <button type="button" class="main-navigation_button-menu">
+                    <svg width="24" height="16" class="main-navigation_button-menu-icon">
+                        <use class="icon-menu" href="./images/icons/sprite.svg#icon-mobile_nav-menu"></use>
+                        <use class="icon-cross" href="./images/icons/sprite.svg#icon-close"></use>
+                    </svg>
+                </button>
                 
+                <ul lang="ru" class="main-navigation__list list">
+                    <li class="main-navigation__item current">  <a href='./index.html' class="main-navigation__link current">Студия </a></li>
+                    <li class="main-navigation__item">          <a href='./portfolio.html' class="main-navigation__link">Портфолио  </a></li>
+                    <li class="main-navigation__item">          <a href='' class="main-navigation__link">Контакты                   </a></li>
+                </ul>
+            
+            
                 <ul class="header__contacts-list list">
                     <li class="header__contacts-item">
                         <a href='mailto:info@devstudio.com' class="header__contacts-link">
@@ -47,14 +54,17 @@
                         </a>
                     </li>
                 </ul>
-            </div>    
-    </header>
+            </nav>
+        </div>    
+</header>
 
     <!--Главный контент-->
     <main>
         <section class="hero">
-            <h1 class="hero__title">Эффективные решения<br> для вашего бизнеса</h1>
-            <button type="button" class="hero__button" data-modal-open >Заказать услугу</button>
+            <div class="container">
+                <h1 class="hero__title">Эффективные решения<br> для вашего бизнеса</h1>
+                <button type="button" class="hero__button" data-modal-open >Заказать услугу</button>
+            </div>
         </section>
 
         <section class="section main-advantages">
@@ -109,7 +119,24 @@
                 <h2 class="personal__title">Наша команда</h2>
                 <ul class="personal__list list">
                     <li class="personal__card">
-                        <img src="./images/personal-igor-demyanenko.jpg" alt="personal-igor-demyanenko" width="270" height="260">
+                        <picture class="personal__picture">
+                            <source
+                                srcset="./images/personal-images-min/personal-igor-dem_min-desk@1x.jpg 1x,
+                                ./images/personal-images-min/personal-igor-dem_min-desk@2x.jpg 2x"
+                                media="(min-width:1200px)"
+                            >
+                            <source
+                                srcset="./images/personal-images-min/personal-igor-dem_min-tab@1x.jpg 1x,
+                                ./images/personal-images-min/personal-igor-dem_min-tab@2x.jpg 2x"
+                                media="(min-width:768px)"
+                            >
+                            <source
+                                srcset="./images/personal-images-min/personal-igor-dem_min-mob@1x.jpg 1x,
+                                ./images/personal-images-min/personal-igor-dem_min-mob@2x.jpg 2x"
+                                media="(min-width:480px)"
+                            >
+                            <img src="./images/personal-images-min/personal-igor-dem_min-mob@1x.jpg" alt="personal-igor-demyanenko">
+                        </picture>
                         <h3 class="personal__card-title">Игорь Демьяненко</h3>
                         <p class="personal__card-description">Product Designer</p>
                         <ul class="personal__card-social-links-list list">
@@ -147,7 +174,24 @@
                         </ul>
                     </li>
                     <li class="personal__card">
-                        <img src="./images/personal-olga-repina.jpg" alt="personal-olga-repina" width="270" height="260">
+                        <picture>
+                            <source
+                                srcset="./images/personal-images-min/personal-olga-rep_min-desk@1x.jpg 1x,
+                                ./images/personal-images-min/personal-olga-rep_min-desk@2x.jpg 2x"
+                                media="(min-width:1200px)"
+                            >
+                            <source
+                                srcset="./images/personal-images-min/personal-olga-rep_min-tab@1x.jpg 1x,
+                                ./images/personal-images-min/personal-olga-rep_min-tab@2x.jpg 2x"
+                                media="(min-width:768px)"
+                            >
+                            <source
+                                srcset="./images/personal-images-min/personal-olga-rep_min-mob@1x.jpg 1x,
+                                ./images/personal-images-min/personal-olga-rep_min-mob@2x.jpg 2x"
+                                media="(min-width:480px)"
+                            >
+                            <img src="./images/personal-images-min/personal-olga-rep_min-mob@1x.jpg" alt="personal-olga-repina">
+                        </picture>
                         <h3 class="personal__card-title">Ольга Репина</h3>
                         <p class="personal__card-description">Frontend Developer</p>
                         <ul class="personal__card-social-links-list list">
@@ -185,7 +229,24 @@
                         </ul>
                     </li>
                     <li class="personal__card">
-                        <img src="./images/personal-nikolaj-tarasov.jpg" alt="personal-nikolaj-tarasov" width="270" height="260">
+                        <picture>
+                            <source
+                                srcset="./images/personal-images-min/personal-nik-tarasov_min-desk@1x.jpg 1x,
+                                ./images/personal-images-min/personal-nik-tarasov_min-desk@2x.jpg 2x"
+                                media="(min-width:1200px)"
+                            >
+                            <source
+                                srcset="./images/personal-images-min/personal-nik-tarasov_min-tab@1x.jpg 1x,
+                                ./images/personal-images-min/personal-nik-tarasov_min-tab@2x.jpg 2x"
+                                media="(min-width:768px)"
+                            >
+                            <source
+                                srcset="./images/personal-images-min/personal-nik-tarasov_min-mob@1x.jpg 1x,
+                                ./images/personal-images-min/personal-nik-tarasov_min-mob@2x.jpg 2x"
+                                media="(min-width:480px)"
+                            >
+                            <img src="./images/personal-images-min/personal-nik-tarasov_min-mob@1x.jpg" alt="personal-nikolaj-tarasov">
+                        </picture>
                         <h3 class="personal__card-title">Николай Тарасов</h3>
                         <p class="personal__card-description">Marketing</p>
                         <ul class="personal__card-social-links-list list">
@@ -223,7 +284,23 @@
                         </ul>
                     </li>
                     <li class="personal__card">
-                        <img src="./images/personal-mihail-ermakov.jpg" alt="personal-mihail-ermakov" width="270" height="260">
+                        <picture>
+                            <source
+                                srcset="./images/personal-images-min/personal-michael-ermak_min-desk@1x.jpg 1x,
+                                ./images/personal-images-min/personal-michael-ermak_min-desk@2x.jpg 2x"
+                                media="(min-width:1200px)"
+                            >
+                            <source
+                                srcset="./images/personal-images-min/personal-michael-ermak_min-tab@1x.jpg 1x,
+                                ./images/personal-images-min/personal-michael-ermak_min-tab@2x.jpg 2x"
+                                media="(min-width:768px)"
+                            >
+                            <source
+                                srcset="./images/personal-images-min/personal-michael-ermak_min-mob@1x.jpg 1x, 
+                                ./images/personal-images-min/personal-michael-ermak_min-mob@2x.jpg 2x"
+                                media="(min-width:480px)"
+                            >
+                            <img src="./images/personal-images-min/personal-michael-ermak_min-mob@1x.jpg" alt="personal-michael-ermakov" >
                         <h3 class="personal__card-title">Михаил Ермаков</h3>
                         <p class="personal__card-description">UI Designer</p>
                         <ul class="personal__card-social-links-list list">
@@ -266,7 +343,7 @@
 
         <section class="section clients">
             <div class="container">
-                <h2 class="clients__title">Постоянны клиенты</h2>
+                <h2 class="clients__title">Постоянные клиенты</h2>
                 <ul class="clients__list list">
                     <li class="clients__item">
                         <a class="clients__link">
@@ -322,7 +399,7 @@
 
     <!--Футер-->
     <footer class="footer">
-        <div class="container footer">
+        <div class="container">
             <div class="footer__adress">
                 <a href='./index.html' lang="en" class="logo">Web<span class="footer-logo">Studio</span></a>
                 <address class="footer__adreess-content">
