@@ -34,15 +34,31 @@
 /* Навигация */
 
 .main-navigation_button-menu {
-    
-    display: inline-flex;
     padding: 0;
     border: none;
     background-color: transparent;
+    width: 40px;
+    height: 40px;
+
+    top:10px;
+    right: 15px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--hover-svg-blue-color);
+    }
+    
     
     // @media screen and (min-width:768px) {
     //     display: none;
     // }
+}
+
+.main-navigation_button-menu-icon {
+    fill: currentColor;
 }
 
 
@@ -82,7 +98,9 @@
 /* Подчеркивание активной страницы */
 
 .main-navigation__item {
-    display: none;
+    @media screen and (max-width:767px) {
+        display: none;
+    }
     // position: relative;
 
     // &:not(:last-child) {
@@ -107,7 +125,9 @@
  }
 
 .header__contacts-list {
-    display: none;
+    @media screen and (max-width:767px) {
+        display: none;
+    }
 //     display: flex;
 //     margin-left: auto;
 
@@ -122,7 +142,9 @@
 }
 
 .header__contacts-link {
-    display: none;
+    @media screen and (max-width:767px) {
+        display: none;
+    }
 //     color: var(--text-gray-color);
 //     text-decoration: none;
 
@@ -142,7 +164,9 @@
 }
 
 .header__contacts-icon-email {
-    display: none;
+    @media screen and (max-width:767px) {
+        display: none;
+    }
 //     fill: currentColor;
 //     width: 16px;
 //     height: 12px;
@@ -150,7 +174,9 @@
 }
 
 .header__contacts-icon-telephone {
-    display: none;
+    @media screen and (max-width:767px) {
+        display: none;
+    }
 //     fill: currentColor;
 //     width: 10px;
 //     height: 16px;
