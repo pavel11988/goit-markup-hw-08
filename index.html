@@ -484,74 +484,79 @@
         <div class="modal">
             <button class="modal__close-button" type="button"  data-modal-close>
                 <svg class="modal__icon-close">
-                    <use href="./images/icons/sprite.svg#icon-close-modal"></use>
+                    <use href="./images/icons/sprite.svg#icon-close"></use>
                 </svg>
             </button>
-            <h2 class="modal__title">Оставьте свои данные, мы вам перезвоним</h2>
-            
-            <form class="modal__form">
 
-                <div class="form-field">
-                    <label for="name" class="form-field__label">Имя
-                        <span class="form-field__span">
-                            <input class="form-field__input" type="text" name="name" id="name" required autofocus />
-                            <span class="form-field__input-icon">
-                                <svg class="form-field__icon" width="12" height="12">  
-                                    <use href="./images/icons/sprite.svg#icon-input_contact"></use>
-                                </svg>
-                            </span>
-                        </span>
-                    </label>
-                </div>
+            <div class="modal__container">
+
+                <h2 class="modal__title">Оставьте свои данные, мы вам перезвоним</h2>
                 
-                <div class="form-field">
-                    <label for="tel" class="form-field__label">Телефон
-                        <span class="form-field__span">
-                            <input class="form-field__input" type="tel" name="tel" id="tel" required autofocus />
-                            <span class="form-field__input-icon">
-                                <svg class="form-field__icon" width="13" height="13">
-                                    <use href="./images/icons/sprite.svg#icon-input_tel"></use>
-                                </svg>
+                <form class="modal__form">
+
+                    <div class="form-field">
+                        <label for="name" class="form-field__label">Имя
+                            <span class="form-field__span">
+                                <input class="form-field__input" type="text" name="name" id="name" required autofocus />
+                                <span class="form-field__input-icon">
+                                    <svg class="form-field__icon" width="12" height="12">  
+                                        <use href="./images/icons/sprite.svg#icon-input_contact"></use>
+                                    </svg>
+                                </span>
                             </span>
-                        </span>    
-                    </label>
+                        </label>
+                    </div>
                     
-                </div>
-                
-                <div class="form-field">
-                    <label for="email" class="form-field__label">Почта
-                        <span class="form-field__span">
-                            <input class="form-field__input" type="email" name="email" id="email" autofocus />
-                            <span class="form-field__input-icon">
-                                <svg class="form-field__icon" width="15" height="12">
-                                    <use href="./images/icons/sprite.svg#icon-input_mail"></use>
-                                </svg>
+                    <div class="form-field">
+                        <label for="tel" class="form-field__label">Телефон
+                            <span class="form-field__span">
+                                <input class="form-field__input" type="tel" name="tel" id="tel" required autofocus />
+                                <span class="form-field__input-icon">
+                                    <svg class="form-field__icon" width="13" height="13">
+                                        <use href="./images/icons/sprite.svg#icon-input_tel"></use>
+                                    </svg>
+                                </span>
+                            </span>    
+                        </label>
+                        
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="email" class="form-field__label">Почта
+                            <span class="form-field__span">
+                                <input class="form-field__input" type="email" name="email" id="email" autofocus />
+                                <span class="form-field__input-icon">
+                                    <svg class="form-field__icon" width="15" height="12">
+                                        <use href="./images/icons/sprite.svg#icon-input_mail"></use>
+                                    </svg>
+                                </span> 
                             </span> 
-                        </span> 
-                    </label>
-                </div>
-                
-                <div class="form-field">
-                    <label for="comment" class="form-field__label">Комментарий</label>
-                        <textarea id="comment" name="comment" rows="8" placeholder="Введите текст"
-                            class="form-field__textarea-comment"></textarea>     
-                </div>
+                        </label>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="comment" class="form-field__label">Комментарий</label>
+                            <textarea id="comment" name="comment" rows="8" placeholder="Введите текст"
+                                class="form-field__textarea-comment"></textarea>     
+                    </div>
 
-                <div class="policy">
-                    <label class="policy__label" for="check-policy">
-                        <input class="policy__checkbox" type="checkbox" name="check-policy" id="check-policy">
-                        <span class="policy__check-icon">
-                            <svg class="policy__svg-check-icon">
-                                <use href="./images/icons/sprite.svg#icon-min_check"></use>
-                            </svg>
-                        </span>
-                        <span class="policy__text">Соглашаюсь с рассылкой и принимаю <a class="policy__text--blue" href="">Условия договора</a></span>
-                    </label>
-                </div>
+                    <div class="policy">
+                        <label class="policy__label" for="check-policy">
+                            <input class="policy__checkbox" type="checkbox" name="check-policy" id="check-policy">
+                            <span class="policy__check-icon">
+                                <svg class="policy__svg-check-icon">
+                                    <use href="./images/icons/sprite.svg#icon-min_check"></use>
+                                </svg>
+                            </span>
+                            <span class="policy__text">Соглашаюсь с рассылкой и принимаю <a class="policy__text--blue" href="">Условия договора</a></span>
+                        </label>
+                    </div>
+                
+                    <button type="submit" class="modal__submit-button">Отправить</button>
+                
+                </form>
+            </div>
             
-                <button type="submit" class="modal__submit-button">Отправить</button>
-            
-            </form>
         </div>
     </div>
 
@@ -616,12 +621,6 @@
     
 
     <script src="./js/modal.js"></script>
-    <!-- <script
-    defer
-    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-    crossorigin="anonymous"
-    ></script> -->
     
     <script
     defer

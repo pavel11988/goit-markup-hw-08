@@ -19,37 +19,51 @@
 
     <!--Шапка-->
     <header class="header"> 
-        <div class="container header__main-navigation">
+        <div class="container header__container">
             <nav class="header__main-navigation">
                 <a href='./index.html' lang="en" class="logo">Web<span class="header-logo">Studio</span></a>
+                
+                
+                <button
+                        class="main-navigation_button-menu js-open-menu"
+                        aria-expanded="false"
+                        aria-controls="mobile-menu"
+                        >
+                <!-- <button type="button" class="main-navigation_button-menu js-open-menu" aria-expanded="false" aria-controls="mobile-menu"> -->
+                    <svg width="24" height="16" class="main-navigation_button-menu-icon">
+                        <use class="icon-menu" href="./images/icons/sprite.svg#icon-mobile_nav-menu"></use>
+                    </svg>
+                
+                </button>
                 
                 <ul lang="ru" class="main-navigation__list list">
                     <li class="main-navigation__item">  <a href='./index.html' class="main-navigation__link">Студия </a></li>
                     <li class="main-navigation__item current">          <a href='./portfolio.html' class="main-navigation__link current">Портфолио  </a></li>
                     <li class="main-navigation__item">          <a href='' class="main-navigation__link">Контакты                   </a></li>
                 </ul>
-            </nav>
             
-            <ul class="header__contacts-list list">
-                <li class="header__contacts-item">
-                    <a href='mailto:info@devstudio.com' class="header__contacts-link">
-                        <svg class="header__contacts-icon-email">
-                            <use href="./images/icons/sprite.svg#icon-mail"></use>
-                        </svg>
-                        info@devstudio.com
-                    </a>
-                </li>
-                <li class="header__contacts-item">
-                    <a href='tel:+380961111111' class="header__contacts-link">
-                        <svg class="header__contacts-icon-telephone">
-                            <use href="./images/icons/sprite.svg#icon-smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
+            
+                <ul class="header__contacts-list list">
+                    <li class="header__contacts-item">
+                        <a href='mailto:info@devstudio.com' class="header__contacts-link">
+                            <svg class="header__contacts-icon-email">
+                                <use href="./images/icons/sprite.svg#icon-mail"></use>
+                            </svg>
+                            info@devstudio.com
+                        </a>
+                    </li>
+                    <li class="header__contacts-item">
+                        <a href='tel:+380961111111' class="header__contacts-link">
+                            <svg class="header__contacts-icon-telephone">
+                                <use href="./images/icons/sprite.svg#icon-smartphone"></use>
+                            </svg>
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>    
-</header>
+    </header>
 
 
     <!--Главный контент-->
@@ -73,7 +87,28 @@
                             коронавируса. Компании используют эту платформу для 
                             цифрового шпионажа и атак на защищённые сервера конкурентов.
                         </p>
-                        <img src="./images/portfolio-technokryak-min.jpg" alt="notebook-with-three-personals" width="370" height="294">
+
+                        <picture class="project__picture">
+                            <source
+                                srcset="./images/portfolio-images-min/project_techno-crack-desk-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_techno-crack-desk-min-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                            />
+                            <source
+                            srcset="./images/portfolio-images-min/project_techno-crack-tab-min-1x.jpg 1x,
+                            ./images/portfolio-images-min/project_techno-crack-tab-min-2x.jpg 2x"
+                                media="(min-width:768px)"
+                            />
+                            <source
+                            srcset="./images/portfolio-images-min/project_techno-crack-mob-min-1x.jpg 1x,
+                            ./images/portfolio-images-min/project_techno-crack-mob-min-2x.jpg 2x"
+                                media="(min-width:480px)"
+                            />
+                            <img srcset="./images/portfolio-images-min/project_techno-crack-mob-min-1x.jpg 450w" 
+                            src="./images/portfolio-images-min/project_techno-crack-mob-min-1x.jpg" 
+                            alt="project_techno-crack" />
+                        </picture>
+                        
                     </div>   
                     <div class="project__card-content">
                             <h2 class="project__title">Технокряк</h2>
@@ -89,7 +124,29 @@
                             voluptatum veritatis, commodi saepe unde, laborum voluptates 
                             praesentium cumque maxime.
                         </p>
-                        <img src="./images/portfolio-poster-new-orlean-vs-golden-star-min.jpg" alt="two-basketballers" width="370" height="294">
+
+                        <picture class="project__picture">
+                            <source
+                                srcset="./images/portfolio-images-min/project_poster-basketball-desk-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_poster-basketball-desk-min-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                            />
+                            <source
+                                srcset="./images/portfolio-images-min/project_poster-basketball-tab-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_poster-basketball-tab-min-2x.jpg 2x"
+                                media="(min-width:768px)"
+                            />
+                            <source
+                                srcset="./images/portfolio-images-min/project_poster-basketball-mob-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_poster-basketball-mob-min-2x.jpg 2x"
+                                media="(min-width:480px)"
+                            />
+                            <img 
+                            srcset="./images/portfolio-images-min/project_poster-basketball-mob-min-1x.jpg 450w" 
+                            src="./images/portfolio-images-min/project_poster-basketball-mob-min-1x.jpg" 
+                            alt="project_poster-basketball" />
+                        </picture>
+
                     </div>   
                     <div class="project__card-content">
                             <h2 class="project__title"> Постер New Orlean vs Golden Star</h2>
@@ -105,7 +162,29 @@
                             voluptatum veritatis, commodi saepe unde, laborum voluptates
                             praesentium cumque maxime.
                         </p>
-                        <img src="./images/portfolio-restaurant-seafood-min.jpg" alt="logo-with-fish" width="370" height="294">
+
+                        <picture class="personal__picture">
+                            <source
+                                srcset="./images/portfolio-images-min/project_restaurant-seafood-desk-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_restaurant-seafood-desk-min-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                            />
+                            <source
+                                srcset="./images/portfolio-images-min/project_restaurant-seafood-tab-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_restaurant-seafood-tab-min-2x.jpg 2x"
+                                media="(min-width:768px)"
+                            />
+                            <source
+                                srcset="./images/portfolio-images-min/project_restaurant-seafood-mob-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_restaurant-seafood-mob-min-2x.jpg 2x"
+                                media="(min-width:480px)"
+                            />
+                            <img 
+                            srcset="./images/portfolio-images-min/project_restaurant-seafood-mob-min-1x.jpg 450w" 
+                            src="./images/portfolio-images-min/project_restaurant-seafood-mob-min-1x.jpg" 
+                            alt="project_restaurant-seafood" />
+                        </picture>
+
                     </div>
                     <div class="project__card-content">
                         <h2 class="project__title"> Ресторан Seafood</h2>
@@ -121,7 +200,29 @@
                             voluptatum veritatis, commodi saepe unde, laborum voluptates
                             praesentium cumque maxime.
                         </p>
-                        <img src="./images/portfolio-project-prime-min.jpg" alt="black-headphones" width="370" height="294">
+
+                        <picture class="project__picture">
+                            <source
+                                srcset="./images/portfolio-images-min/project_project-prime-desk-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_project-prime-desk-min-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                            />
+                            <source
+                                srcset="./images/portfolio-images-min/project_project-prime-tab-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_project-prime-tab-min-2x.jpg 2x"
+                                media="(min-width:768px)"
+                            />
+                            <source
+                                srcset="./images/portfolio-images-min/project_project-prime-mob-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_project-prime-mob-min-2x.jpg 2x"
+                                media="(min-width:480px)"
+                            />
+                            <img 
+                            srcset="./images/portfolio-images-min/project_project-prime-mob-min-1x.jpg 450w" 
+                            src="./images/portfolio-images-min/project_project-prime-mob-min-1x.jpg" 
+                            alt="project_project-prime" />
+                        </picture>
+
                     </div>
                     <div class="project__card-content">
                         <h2 class="project__title"> Проект Prime</h2>
@@ -137,7 +238,31 @@
                             voluptatum veritatis, commodi saepe unde, laborum voluptates
                             praesentium cumque maxime.
                         </p>
-                        <img src="./images/portfolio-project-boxes-min.jpg" alt="two-boxes" width="370" height="294">
+
+                        <picture class="project__picture">
+                            <source
+                                srcset="./images/portfolio-images-min/project_project-boxes-desk-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_project-boxes-desk-min-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                            />
+                            <source
+                                srcset="./images/portfolio-images-min/project_project-boxes-tab-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_project-boxes-tab-min-2x.jpg 2x"
+                                media="(min-width:768px)"
+                            />
+                            <source
+                                srcset="./images/portfolio-images-min/project_project-boxes-mob-min-1x.jpg  1x,
+                                ./images/portfolio-images-min/project_project-boxes-mob-min-2x.jpg 2x"
+                                media="(min-width:480px)"
+                            />
+                            <img 
+                            srcset="./images/portfolio-images-min/project_project-boxes-mob-min-1x.jpg 450w" 
+                            src="./images/portfolio-images-min/project_project-boxes-mob-min-1x.jpg" 
+                            alt="project_project-prime" />
+                        </picture>
+
+
+
                     </div>
                     <div class="project__card-content">
                         <h2 class="project__title"> Проект Boxes</h2>
@@ -153,8 +278,30 @@
                             voluptatum veritatis, commodi saepe unde, laborum voluptates
                             praesentium cumque maxime.
                         </p>
-                        <img src="./images/portfolio-inspiration-has-no-borders-min.jpg" alt="monitor-with-world-map" width="370"
-                            height="294">
+
+                        <picture class="project__picture">
+                            <source
+                                srcset="./images/portfolio-images-min/project_inspiration-desk-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_inspiration-desk-min-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                            />
+                            <source
+                                srcset="./images/portfolio-images-min/project_inspiration-tab-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_inspiration-tab-min-2x.jpg 2x"
+                                media="(min-width:768px)"
+                            />
+                            <source
+                                srcset="./images/portfolio-images-min/project_inspiration-mob-min-1x.jpg  1x,
+                                ./images/portfolio-images-min/project_inspiration-mob-min-2x.jpg 2x"
+                                media="(min-width:480px)"
+                            />
+                            <img 
+                            srcset="./images/portfolio-images-min/project_inspiration-mob-min-1x.jpg 450w" 
+                            src="./images/portfolio-images-min/project_inspiration-mob-min-1x.jpg" 
+                            alt="project_project_inspiration" />
+                        </picture>
+
+
                     </div>
                     <div class="project__card-content">
                         <h2 class="project__title"> Inspiration has no Borders</h2>
@@ -170,7 +317,29 @@
                             voluptatum veritatis, commodi saepe unde, laborum voluptates
                             praesentium cumque maxime.
                         </p>
-                        <img src="./images/portfolio-magazine-limited-edition-min.jpg" alt="unfolded-magazine" width="370" height="294">
+
+                        <picture class="project__picture">
+                            <source
+                                srcset="./images/portfolio-images-min/project_magazine-desk-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_magazine-desk-min-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                            />
+                            <source
+                                srcset="./images/portfolio-images-min/project_magazine-tab-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_magazine-tab-min-2x.jpg 2x"
+                                media="(min-width:768px)"
+                            />
+                            <source
+                                srcset="./images/portfolio-images-min/project_magazine-mob-min-1x.jpg  1x,
+                                ./images/portfolio-images-min/project_magazine-mob-min-2x.jpg 2x"
+                                media="(min-width:480px)"
+                            />
+                            <img 
+                            srcset="./images/portfolio-images-min/project_magazine-mob-min-1x.jpg 450w" 
+                            src="./images/portfolio-images-min/project_magazine-mob-min-1x.jpg" 
+                            alt="project_project_magazine" />
+                        </picture>
+
                     </div>
                     <div class="project__card-content">
                         <h2 class="project__title"> Издание Limited Edition</h2>
@@ -186,7 +355,29 @@
                             voluptatum veritatis, commodi saepe unde, laborum voluptates
                             praesentium cumque maxime.
                         </p>
-                        <img src="./images/portfolio-project-lab-min.jpg" alt="sticker-label-tag" width="370" height="294">
+
+                        <picture class="project__picture">
+                            <source
+                                srcset="./images/portfolio-images-min/project_project-lab-desk-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_project-lab-desk-min-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                            />
+                            <source
+                                srcset="./images/portfolio-images-min/project_project-lab-tab-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_project-lab-tab-min-2x.jpg 2x"
+                                media="(min-width:768px)"
+                            />
+                            <source
+                                srcset="./images/portfolio-images-min/project_project-lab-mob-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_project-lab-mob-min-2x.jpg 2x"
+                                media="(min-width:480px)"
+                            />
+                            <img 
+                            srcset="./images/portfolio-images-min/project_project-lab-mob-min-1x.jpg 450w" 
+                            src="./images/portfolio-images-min/project_project-lab-mob-min-1x.jpg" 
+                            alt="project_project-lab" />
+                        </picture>
+
                     </div>
                     <div class="project__card-content">
                         <h2 class="project__title"> Проект LAB</h2>
@@ -202,7 +393,31 @@
                             voluptatum veritatis, commodi saepe unde, laborum voluptates
                             praesentium cumque maxime.
                         </p>
-                        <img src="./images/portfolio-growing-business-min.jpg" alt="two-hands-and-notebook" width="370" height="294">
+
+                        <picture class="project__picture">
+                            <source
+                                srcset="./images/portfolio-images-min/project_growing-desk-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_growing-desk-min-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                            />
+                            <source
+                                srcset="./images/portfolio-images-min/project_growing-tab-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_growing-tab-min-2x.jpg 2x"
+                                media="(min-width:768px)"
+                            />
+                            <source
+                                srcset="./images/portfolio-images-min/project_growing-mob-min-1x.jpg 1x,
+                                ./images/portfolio-images-min/project_growing-mob-min-2x.jpg 2x"
+                                media="(min-width:480px)"
+                            />
+                            <img 
+                            srcset="./images/portfolio-images-min/project_growing-mob-min-1x.jpg 450w" 
+                            src="./images/portfolio-images-min/project_growing-mob-min-1x.jpg" 
+                            alt="project_project-lab" />
+                        </picture>
+
+
+
                     </div>
                     <div class="project__card-content">
                         <h2 class="project__title"> Growing Business</h2>
@@ -281,5 +496,74 @@
             </div>
         </div>          
     </footer>
+
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+        <div class="container-mobile">
+            <button type="button" class="mobile-menu__button-menu js-close-menu">
+                <svg width="18" height="18" class="mobile-menu__button-menu-icon">
+                    <use class="icon-cross" href="./images/icons/sprite.svg#icon-close"></use>
+                </svg>
+            </button>
+            
+            <div class="mobile-menu__content">
+                <ul lang="ru" class="mobile-menu__list list">
+                    <li class="mobile-menu__item">  <a href='./index.html' class="mobile-menu__link">Студия </a></li>
+                    <li class="mobile-menu__item current">          <a href='./portfolio.html' class="mobile-menu__link current">Портфолио  </a></li>
+                    <li class="mobile-menu__item">          <a href='' class="mobile-menu__link">Контакты                   </a></li>
+                </ul>
+
+                <div class="mobile-menu__content-down">
+    
+                    <ul class="mobile-menu__contacts-list list">
+                            <li class="mobile-menu__contacts-item">
+                                <a href='tel:+380961111111' class="mobile-menu__contacts-link telephone">
+                                    +38 096 111 11 11
+                                </a>
+                            </li>
+                            <li class="mobile-menu__contacts-item">
+                                <a href='mailto:info@devstudio.com' class="mobile-menu__contacts-link e-mail">
+                                    info@devstudio.com
+                                </a>
+                            </li>
+                    </ul>
+            
+                    <ul class="mobile-menu__social-links">
+                            <li class="mobile-menu__social-links-item">
+                                <a href="" class="mobile-menu__social-links-link">
+                                    Instagram
+                                </a>        
+                            </li>
+                            <li class="mobile-menu__social-links-item">
+                                <a href="" class="mobile-menu__social-links-link">
+                                    Twitter
+                                </a>
+                                
+                            </li>
+                            <li class="mobile-menu__social-links-item">
+                                <a href="" class="mobile-menu__social-links-link">
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="mobile-menu__social-links-item">
+                                <a href="" class="mobile-menu__social-links-link">
+                                    LinkedIn
+                                </a> 
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous">
+    </script>
+
+    <script defer src="js/mobile-menu.js"></script>
 </body>
 </html>
