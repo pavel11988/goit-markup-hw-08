@@ -9,20 +9,21 @@
     padding-bottom: 16px;
     
 
-    // @media screen and (min-width: 480px) and (max-width:767px){
-    //    
-    // }
+    @media screen and (min-width: 768px) {
+       height: 80px;
+    }
 }
 
 .header__container {
-    width: 100%;
+    @media screen and (max-width: 767px) {
+        width: 100%;
+     }
 }
 
 .header__main-navigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    align-self: center;
     color: var(--static-svg-black-color);
 }
 
@@ -51,10 +52,9 @@
         color: var(--hover-svg-blue-color);
     }
     
-    
-    // @media screen and (min-width:768px) {
-    //     display: none;
-    // }
+    @media screen and (min-width:768px) {
+        display: none;
+    }
 }
 
 .main-navigation_button-menu-icon {
@@ -64,12 +64,31 @@
 
 .main-navigation__list {
     display: none;
+
+    @media screen and (min-width:768px) {
+        display: flex;
+        margin-left: 88px;
+    }
+
     // display: flex;
     // margin-left: 93px;
 }
 
 .main-navigation__link {
     display: none;
+
+    @media screen and (min-width:768px) {
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        color: var(--static-svg-black-color);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+    }
+
     // display: block;
     // padding-top: 32px;
     // padding-bottom: 32px;
@@ -81,52 +100,73 @@
     // letter-spacing: 0.02em;
     // text-decoration: none;
 
-    // transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    // &:visited {
-    //     color: var(--text-black-color);
-    // }
+    &:visited {
+        color: var(--text-black-color);
+    }
     
-    // &:hover,
-    // &:focus {
-    //     color: var(--text-blue-color);
-    //     fill: var(--hover-svg-blue-color);
-    // }
+    &:hover,
+    &:focus {
+        color: var(--text-blue-color);
+        fill: var(--hover-svg-blue-color);
+    }
 
 }
 
 /* Подчеркивание активной страницы */
 
 .main-navigation__item {
-    @media screen and (max-width:767px) {
-        display: none;
+    display: none;
+
+
+    @media screen and (min-width:768px) {
+        display: block;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
     }
-    // position: relative;
+
+     // position: relative;
 
     // &:not(:last-child) {
     //     margin-right: 50px;
     // }
 }
 
-// .main-navigation__link.current {
-//     color: var(--text-blue-color);
+.main-navigation__link.current {
 
-//     &::after {
-//         content: '';
-//         position: absolute;
-//         display: flex;
-//         width: 100%;
-//         justify-content: center;
-//         background-color: var(--btn-hover-blue-color);
-//         border: 2px solid var(--btn-hover-blue-color);
-//         border-radius: 2px;
-//         bottom: -1px;
-//     }
-//  }
+    @media screen and (min-width:768px) {
+    color: var(--text-blue-color);
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            background-color: var(--btn-hover-blue-color);
+            border: 2px solid var(--btn-hover-blue-color);
+            border-radius: 2px;
+            bottom: -1px;
+             }
+    }
+}
 
 .header__contacts-list {
-    @media screen and (max-width:767px) {
-        display: none;
+    display: none;
+    
+    @media screen and (min-width:768px) {
+        display: block;
+        margin-left: auto;
+    
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+        color: var(--text-gray-color);
+
     }
 //     display: flex;
 //     margin-left: auto;
@@ -135,50 +175,76 @@
 //     font-size: 14px;
 //     line-height: 1.14;
 //     letter-spacing: 0.02em;
-// }
+}
 
-// .header__contacts-item:not(:last-child) {
-//     margin-right: 50px;
+.header__contacts-item:not(:last-child) {   
+    // margin-right: 50px;  
 }
 
 .header__contacts-link {
-    @media screen and (max-width:767px) {
-        display: none;
+    display: none;
+
+    @media screen and (min-width:768px) {
+    display: inline-block;
+    color: var(--text-gray-color);
+    text-decoration: none;
+
+    &.email{
+        padding-top: 21px;
+        padding-bottom: 5px;
     }
-//     color: var(--text-gray-color);
-//     text-decoration: none;
 
-//     padding-top: 32px;
-//     padding-bottom: 32px;
+    &.tel{
+        padding-top: 5px;
+        padding-bottom: 21px;
+    }
 
-//     display: flex;
-//     align-items: center;
+    
+    align-items: center;
 
-//     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-//     &:hover,
-//     &:focus {
-//         color: var(--text-blue-color);
-//         fill: var(--hover-svg-blue-color);
-//     }
+    &:hover,
+    &:focus {
+        color: var(--text-blue-color);
+        fill: var(--hover-svg-blue-color);
+    }
+
+    // display: flex;
+
 }
 
 .header__contacts-icon-email {
-    @media screen and (max-width:767px) {
-        display: none;
+    display: none;
+
+    @media screen and (min-width:768px) {
+        display: inline-block;
+        fill: currentColor;
+        width: 14px;
+        height: 10px;
+        // width: 16px;
+        // height: 12px;
+        margin-right: 8px;
     }
-//     fill: currentColor;
-//     width: 16px;
-//     height: 12px;
-//     margin-right: 10px;
+
+    // margin-right: 10px;
 }
 
 .header__contacts-icon-telephone {
-    @media screen and (max-width:767px) {
-        display: none;
+    display: none;
+
+    @media screen and (min-width:768px) {
+        display: inline-block;
+        fill: currentColor;
+        width: 10px;
+        height: 14px;
+
+
+        // height: 16px; - desktop
+
+        margin-right: 8px;
     }
-//     fill: currentColor;
-//     width: 10px;
-//     height: 16px;
-//     margin-right: 10px;
+
+    // margin-right: 10px;
 }
