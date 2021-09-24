@@ -47,12 +47,21 @@
     
         width: 100%;
         height: 100%;
-    
-        // padding: 63px 24px;
-        padding: 77px 24px;
-    
-        font-size: 18px;
+
+        text-align: center;
+       
+        padding: 25px 25px;
+
+        
+        font-size: 14px;
+        
         line-height: 1.56;
+
+        @media screen and (min-width: 480px) {
+            text-align: left;
+            font-size: 18px;
+            padding: 77px 24px;
+        }
     
         transform: translateY(+100%);
     

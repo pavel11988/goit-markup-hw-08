@@ -348,25 +348,39 @@ img {
 .hero {
   padding-top: 118px;
   padding-bottom: 118px;
-  background-color: gray;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bgr-min/background-hero-min-mobile.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bgr-min/hero-bgr-mob-min-1x.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
-  text-align: center;
+  background-size: cover;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bgr-min/hero-bgr-mob-min-2x.jpg);
+  }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bgr-min/background-hero-min-tablet.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bgr-min/hero-bgr-tab-min-1x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bgr-min/hero-bgr-tab-min-2x.jpg);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bgr-min/background-hero-min-desktop.jpg);
-    padding-top: 200px;
-    padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bgr-min/hero-bgr-desk-min-1x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bgr-min/hero-bgr-desk-min-2x.jpg);
   }
 }
 
@@ -382,7 +396,9 @@ img {
 }
 
 .hero__button {
-  display: inline-block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px 32px;
   border-radius: 4px;
   background-color: var(--text-blue-color);
@@ -677,14 +693,23 @@ img {
   content: '';
   width: 100%;
   height: 100%;
-  padding: 77px 24px;
-  font-size: 18px;
+  text-align: center;
+  padding: 25px 25px;
+  font-size: 14px;
   line-height: 1.56;
   transform: translateY(100%);
   color: #ffffff;
   background-color: rgba(33, 150, 243, 0.9);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 480px) {
+  .project__card-text-overlay {
+    text-align: left;
+    font-size: 18px;
+    padding: 77px 24px;
+  }
 }
 
 .project__card:hover .project__card-text-overlay,
