@@ -95,8 +95,10 @@
 /* Социальные сети */
 
 .footer__social-links {
-
-  margin-top: 40px;
+  
+  @media screen and (max-width:480px) {
+    margin-top: 40px;
+  }
 
   @media screen and (min-width:480px) and (max-width:767px) {
     margin-top: 60px;
