@@ -113,8 +113,11 @@
   line-height: 1.14;
   text-transform: uppercase;
   color: #ffffff;
-}
 
+    @media screen and (min-width:1200px) {
+      text-align: left;
+    }
+}
 .footer__social-network.social-links {
   display: flex;
   justify-content: center;
@@ -136,15 +139,14 @@
 
   @media screen and (min-width:768px) and (max-width:1199px) {
     width: 450px;
-    align-items: center;
     margin-left: auto;
     margin-right: auto;
   }
 
   @media screen and (min-width:1200px) {
     width: 570px;
+    text-align: start;
     margin-top: 0;
-    padding-top: 12px;
     padding-bottom: 34px;
     margin-left: 93px;
   }

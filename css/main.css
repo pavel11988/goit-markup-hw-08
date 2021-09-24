@@ -467,6 +467,12 @@ img {
   color: #ffffff;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer__social-network.social-links-title {
+    text-align: left;
+  }
+}
+
 .footer__social-network.social-links {
   display: flex;
   justify-content: center;
@@ -488,7 +494,6 @@ img {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__form-subscribe {
     width: 450px;
-    align-items: center;
     margin-left: auto;
     margin-right: auto;
   }
@@ -497,8 +502,8 @@ img {
 @media screen and (min-width: 1200px) {
   .footer__form-subscribe {
     width: 570px;
+    text-align: start;
     margin-top: 0;
-    padding-top: 12px;
     padding-bottom: 34px;
     margin-left: 93px;
   }
@@ -516,13 +521,13 @@ img {
 @media screen and (min-width: 1200px) {
   .subscribe__label {
     width: 358px;
-    text-align: left;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .subscribe__instruments {
     display: flex;
+    padding-top: 12px;
   }
 }
 
