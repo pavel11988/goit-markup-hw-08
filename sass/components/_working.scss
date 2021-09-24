@@ -1,8 +1,12 @@
 .working {
     display: none;
-    
-    padding-top: 47px;
-    padding-bottom: 94px;
+
+    @media screen and (min-width:1200px) {
+        display: flex;
+        padding-top: 47px;
+        padding-bottom: 94px;
+    }
+
 }
 
 .working__title {
@@ -17,7 +21,7 @@
     position: relative;
     width: 100%;
 
-    & + & {
+    &+& {
         margin-left: 30px;
     }
 }
