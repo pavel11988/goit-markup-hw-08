@@ -1189,7 +1189,7 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .project__card {
     flex-basis: calc((100% - 30px) / 2);
   }
@@ -1216,9 +1216,6 @@ img {
   }
   .project__card:nth-last-child(-3 + n) {
     margin-bottom: 0;
-  }
-  .project__card:first-of-type .project__card-content {
-    padding-bottom: 30px;
   }
 }
 
