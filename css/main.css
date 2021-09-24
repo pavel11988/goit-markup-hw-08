@@ -235,6 +235,12 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .header__contacts-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
 .header__contacts-link {
   display: none;
 }

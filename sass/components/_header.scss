@@ -177,8 +177,15 @@
 //     letter-spacing: 0.02em;
 }
 
-.header__contacts-item:not(:last-child) {   
-    // margin-right: 50px;  
+.header__contacts-item{
+    @media screen and (min-width:768px) {
+       &:not(:last-child) {
+           margin-bottom: 10px;  
+       }
+    }
+    &:not(:last-child) {   
+        // margin-right: 50px;  
+    }
 }
 
 .header__contacts-link {
